@@ -16,12 +16,12 @@ public class LevelGenerator : MonoBehaviour
     private void Awake()
     {
         lastEndPosition = levelPart_Start.Find("EndPosition").position;
-        SpawnLevelPart();
+        SpawnLevelPart(); //spawn something using the private void SpawnLevelPart() at beggining/start
     }
 
     private void Update()
     {
-        if (Vector3.Distance(Player.transform.position, lastEndPosition) < PLAYER_DISTANCE_SPAWN_LEVEL_PART)
+        if (Vector3.Distance(Player.transform.position, lastEndPosition) < PLAYER_DISTANCE_SPAWN_LEVEL_PART) //if the player has moved enough forward
         {
             SpawnLevelPart();
             int startingSpawnLevelParts = 1;
@@ -35,8 +35,8 @@ public class LevelGenerator : MonoBehaviour
     
     private void SpawnLevelPart()
     {
-        Transform chosenLevelPart = levelPartList[Random.Range(0, levelPartList.Count)];
-        Transform lastLevelPartTransform = SpawnLevelPart(chosenLevelPart, lastEndPosition);
+        Transform chosenLevelPart = levelPartList[Random.Range(0, levelPartList.Count)]; //randomizer? maybe?
+        Transform lastLevelPartTransform = SpawnLevelPart(chosenLevelPart, lastEndPosition); //attach new part to end of last one
         lastEndPosition = lastLevelPartTransform.Find("EndPosition").position;
     }
     private Transform SpawnLevelPart(Transform levelPart, Vector3 spawnPosition)
