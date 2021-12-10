@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8349411323244339513}
   - component: {fileID: 202483636013835988}
   - component: {fileID: 7370749346115575900}
+  - component: {fileID: 3383388101484192917}
   m_Layer: 8
   m_Name: Platform (3)
   m_TagString: Platform
@@ -150,6 +151,19 @@ CompositeCollider2D:
   m_CompositePaths:
     m_Paths: []
   m_VertexDistance: 0.0005
+--- !u!114 &3383388101484192917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8349411323244339515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f07d636d0caf53d409b351b00049c797, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 0}
 --- !u!1 &8349411323387854443
 GameObject:
   m_ObjectHideFlags: 0

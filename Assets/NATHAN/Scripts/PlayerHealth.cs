@@ -6,9 +6,9 @@ public class PlayerHealth : MonoBehaviour
 {
     public float Health = 10;
     [SerializeField]
-    public float StartingHealth = 10;
+    public float StartingHealth = 100;
     [SerializeField]
-    public float Heal = 10;
+    public float Heal = 20;
 
     // Start is called before the first frame update
     void Start()

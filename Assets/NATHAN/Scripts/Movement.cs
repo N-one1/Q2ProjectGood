@@ -6,23 +6,23 @@ public class Movement : MonoBehaviour
 {
     float cayoteRemember = 0;
     [SerializeField]
-    float cayoteTime = 0.25f;
+    float cayoteTime = 0.1f;
     float jumpStorage = 0f;
     [SerializeField]
-    float jumpStorageTime = 0.25f;
+    float jumpStorageTime = 0.1f;
     private int extraJumps;
-    //[SerializeField]
+    [SerializeField]
     private int extraJumpsValue;
     [SerializeField]
     private float jumpCut = 0.5f;
     public LayerMask ground;
     [SerializeField]
-    private float jumpPower = 1f;
+    private float jumpPower = 25f;
     private float horizontal;
     [SerializeField]
-    private float moveSpeed = 1f;
+    private float moveSpeed = 12.5f;
     Rigidbody2D rb;
-    public float fallMultiplier = 2.5f;
+    public float fallMultiplier =  5f;
 
     private bool facingRight = true;
 
@@ -130,7 +130,7 @@ public class Movement : MonoBehaviour
 
     public bool IsGrounded() 
     {
-        bool grounded = Physics2D.BoxCast(transform.position + new Vector3(0f, 0f, 0f), new Vector3(1f, 1f, 0f), 0, Vector2.down, 0.7f, ground);
+        bool grounded = Physics2D.BoxCast(transform.position + new Vector3(0f, 0f, 0f), new Vector3(1.25f, 1f, 0f), 0, Vector2.down, 0.7f, ground);
         return grounded;
     }
 }

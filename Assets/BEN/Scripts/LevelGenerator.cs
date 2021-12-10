@@ -13,6 +13,7 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] private GameObject Player;
 
     private Vector3 lastEndPosition;
+
     private void Awake()
     {
         lastEndPosition = levelPart_Start.Find("EndPosition").position;
@@ -39,7 +40,8 @@ public class LevelGenerator : MonoBehaviour
         Transform lastLevelPartTransform = SpawnLevelPart(chosenLevelPart, lastEndPosition); //attach new part to end of last one
         lastEndPosition = lastLevelPartTransform.Find("EndPosition").position;
     }
-    private Transform SpawnLevelPart(Transform levelPart, Vector3 spawnPosition)
+
+    private Transform SpawnLevelPart(Transform levelPart, Vector3 spawnPosition) //spawn function
     {
        Transform levelPartTransform = Instantiate(levelPart, spawnPosition, Quaternion.identity);
         return levelPartTransform;

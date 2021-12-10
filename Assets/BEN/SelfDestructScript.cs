@@ -16,8 +16,11 @@ public class SelfDestructScript : MonoBehaviour
     void Update()
     {
 
-        if (this.transform.position.x - Player.transform.position.x > 110)
+
+        //if ((this.transform.position.x - Player.transform.position.x > 110) && (this.transform.position.x < Player.transform.position.x))
+        if (Mathf.Abs(this.transform.position.x - Player.transform.position.x) > 110 && (this.transform.position.x < Player.transform.position.x))
         {
+            //Debug.Log("Destroy old platform");
             Destroy(this.gameObject);
         }
     }
