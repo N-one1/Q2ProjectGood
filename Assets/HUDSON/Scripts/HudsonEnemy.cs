@@ -22,12 +22,15 @@ public class HudsonEnemy : MonoBehaviour
 
     Rigidbody2D rb2d;
 
+    private Vector2 Direction = new Vector2(1, 0);
+    private SpriteRenderer sprt;
+
     // Start is called before the first frame update
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
         faceAnimator = face.GetComponent<Animator>();
-
+        sprt = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -47,7 +50,6 @@ public class HudsonEnemy : MonoBehaviour
             StopChasingPlayer();
         }
 
-
     }
     void ChasePlayer()
     {
@@ -56,7 +58,7 @@ public class HudsonEnemy : MonoBehaviour
             //enemy is to the left side of the player, so move right
             rb2d.velocity = new Vector2(moveSpeed, 0);
             transform.localScale = new Vector2(1, 1);
-
+            //sprt.flipX = false;
         }
         else if (transform.position.x - player.position.x > 0.15f)
 
@@ -64,7 +66,7 @@ public class HudsonEnemy : MonoBehaviour
             //enemy is to the right side of the player,  so move left
             rb2d.velocity = new Vector2(-moveSpeed, 0);
             transform.localScale = new Vector2(-1, 1);
-
+            //sprt.flipX = true;
         }
         else
         {
@@ -82,6 +84,8 @@ public class HudsonEnemy : MonoBehaviour
 
     private void Flip()
     {
+        
+
         transform.Rotate(0f, 180f, 0f);
 
     }
