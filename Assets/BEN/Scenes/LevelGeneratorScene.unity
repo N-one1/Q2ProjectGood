@@ -147,6 +147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cayoteTime: 0.25
   jumpStorageTime: 0.25
+  extraJumpsValue: 0
   jumpCut: 0.5
   ground:
     serializedVersion: 2
@@ -410,7 +411,7 @@ GameObject:
   - component: {fileID: 554859711}
   - component: {fileID: 554859710}
   m_Layer: 0
-  m_Name: LevelGenerator
+  m_Name: LevelGenerator (Ground level)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -800,7 +801,7 @@ GameObject:
   - component: {fileID: 2101447322}
   - component: {fileID: 2101447321}
   m_Layer: 0
-  m_Name: LevelGenerator (1)
+  m_Name: LevelGenerator (Airborn level 1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
