@@ -6,7 +6,8 @@ public class ConstandDamageScript : MonoBehaviour
 {
     [SerializeField]
     public float Damage = 1;
-    public PlayerHealth PH;
+    public GameObject Player;
+    public PlayerHealth PH; //player health script
     //public EnemyHealthScript EH;
     public int damageRate;
     public int damageRateMax;
@@ -14,7 +15,9 @@ public class ConstandDamageScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<PlayerHealth>();
+        Player = GameObject.Find("Character(HasAnims)");
+
+        PH = Player.GetComponent<PlayerHealth>();
         //GetComponent<EnemyHealthScript>();
 
     }

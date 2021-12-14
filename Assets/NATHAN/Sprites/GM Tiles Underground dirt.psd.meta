@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 529852678a3db0f40b38e476715e8337
+guid: b235ed3f8d9edb44b8606d3a5feec6ec
 TextureImporter:
   fileIDToRecycleName:
-    21300000: GM Tiles Extra Copy_0
-    21300002: GM Tiles Extra Copy_1
-    21300004: GM Tiles Extra Copy_2
-    21300006: GM Tiles Extra Copy_3
+    21300000: GM Tiles Underground dirt_0
+    21300002: GM Tiles Underground dirt_1
+    21300004: GM Tiles Underground dirt_2
+    21300006: GM Tiles Underground dirt_3
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -77,7 +77,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GM Tiles Extra Copy_0
+      name: GM Tiles Underground dirt_0
       rect:
         serializedVersion: 2
         x: 0
@@ -91,13 +91,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7747bc138194374abeba0ac4268cd1e
+      spriteID: 24ce34b841e413840b4b4d7ceba6c4a2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GM Tiles Extra Copy_1
+      name: GM Tiles Underground dirt_1
       rect:
         serializedVersion: 2
         x: 100
@@ -111,13 +111,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ed033b8be7301f4691c17c10a996a2e
+      spriteID: c36a73b895103b9458497f497e8c5444
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GM Tiles Extra Copy_2
+      name: GM Tiles Underground dirt_2
       rect:
         serializedVersion: 2
         x: 200
@@ -131,13 +131,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d6e08e6ee306944fa2b7b8329b7d1a6
+      spriteID: 955bed2e718699841be7acdc96cc1e14
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GM Tiles Extra Copy_3
+      name: GM Tiles Underground dirt_3
       rect:
         serializedVersion: 2
         x: 300
@@ -151,7 +151,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8bb63fc480d5edb4f84972a49dbc1323
+      spriteID: 295b27b57cb6a9a4388eabc1ede9210d
       vertices: []
       indices: 
       edges: []
@@ -159,7 +159,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 9f8ddb58a38621c47996e31e12ddc422
+    spriteID: 5d5ecdc749d429644a39ca3a62284250
     vertices: []
     indices: 
     edges: []

@@ -5,7 +5,8 @@ using UnityEngine;
 public class DamageScript : MonoBehaviour
 {
     [SerializeField]
-    public float Damage = 1;
+    public float Damage = 1; 
+    public GameObject Player;
     public PlayerHealth PH;
     //public EnemyHealthScript EH;
     public bool IsProjectile = true;
@@ -13,7 +14,10 @@ public class DamageScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<PlayerHealth>();
+        Player = GameObject.Find("Character(HasAnims)");
+
+
+        PH = Player.GetComponent<PlayerHealth>();
         //GetComponent<EnemyHealthScript>();
     }
 

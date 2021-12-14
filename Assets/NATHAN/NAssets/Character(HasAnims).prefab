@@ -106,7 +106,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!95 &510774394642952340
 Animator:
@@ -167,6 +167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cayoteTime: 0.1
   jumpStorageTime: 0.1
+  extraJumpsValue: 0
   jumpCut: 0.5
   ground:
     serializedVersion: 2
