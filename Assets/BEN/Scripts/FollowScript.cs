@@ -21,7 +21,7 @@ public class FollowScript : MonoBehaviour
     void Update()
     {
         Playerx = Player.transform.position.x;
-        if(Playerx - 30f > Plateform.transform.position.x)
+        if(Playerx - 80f > Plateform.transform.position.x)
         {
             Plateform.transform.Translate(new Vector2(1f, 0));
         }
