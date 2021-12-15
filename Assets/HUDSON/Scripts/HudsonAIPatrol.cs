@@ -9,7 +9,7 @@ public class HudsonAIPatrol : MonoBehaviour
 
     [HideInInspector]
     public bool mustPatrol;
-    private bool mustTurn;
+    private bool mustTurn, canShoot;
 
     public Rigidbody2D rb;
     public Transform groundCheckPos;
@@ -22,6 +22,7 @@ public class HudsonAIPatrol : MonoBehaviour
     void Start()
     {
         mustPatrol = true;
+        canShoot = true;
     }
 
 
@@ -44,6 +45,8 @@ public class HudsonAIPatrol : MonoBehaviour
 
             mustPatrol = false;
             rb.velocity = Vector2.zero;
+
+            if(canShoot)
             StartCoroutine(Shoot());
         }
         else
@@ -79,11 +82,14 @@ public class HudsonAIPatrol : MonoBehaviour
 
     IEnumerator Shoot()
     {
+        canShoot = false;
+
         yield return new WaitForSeconds(timeBTWShots);
         GameObject newBullet = Instantiate(bullet, shootPos.position, Quaternion.identity);
 
         newBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(shootSpeed * walkSpeed * Time.fixedDeltaTime, 0f);
-
+        Debug.Log("Shoot");
+        canShoot = true;
 
     }
 }
