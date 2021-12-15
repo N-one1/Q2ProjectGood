@@ -285,26 +285,20 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 8646374464024701645}
     m_ColliderPaths:
-    - - X: 190000000
-        Y: 20000000
-      - X: 90000000
-        Y: 20000000
-      - X: 90000000
-        Y: 0
-      - X: 100000000
-        Y: 0
-      - X: 100000000
+    - - X: 90000000
         Y: 10000000
       - X: 190000000
         Y: 10000000
+      - X: 190000000
+        Y: 20000000
+      - X: 90000000
+        Y: 20000000
   m_CompositePaths:
     m_Paths:
-    - - {x: 10, y: 1}
-      - {x: 19, y: 1}
-      - {x: 19, y: 2}
+    - - {x: 19, y: 2}
       - {x: 9, y: 2}
-      - {x: 9, y: 0}
-      - {x: 10, y: 0}
+      - {x: 9, y: 1}
+      - {x: 19, y: 1}
   m_VertexDistance: 0.0005
 --- !u!19719996 &8646374464024701645
 TilemapCollider2D:
@@ -615,7 +609,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8349411323387854443}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
