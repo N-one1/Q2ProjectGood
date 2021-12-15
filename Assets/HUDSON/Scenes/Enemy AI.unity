@@ -2023,11 +2023,6 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 0.9051222
       objectReference: {fileID: 0}
-    - target: {fileID: 510774394642952342, guid: 77fa19db9819de344b650d593bcf122a,
-        type: 3}
-      propertyPath: moveSpeed
-      value: 8
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77fa19db9819de344b650d593bcf122a, type: 3}
 --- !u!1 &2025520799
