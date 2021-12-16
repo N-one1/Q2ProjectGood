@@ -58,15 +58,15 @@ public class HudsonEnemy : MonoBehaviour
             //enemy is to the left side of the player, so move right
             rb2d.velocity = new Vector2(moveSpeed, 0);
             transform.localScale = new Vector2(1, 1);
-            //sprt.flipX = false;
+            sprt.flipX = false;
         }
         else if (transform.position.x - player.position.x > 0.15f)
 
         {
-            //enemy is to the right side of the player,  so move left
+            //enemy is to the right side of the player, so move left
             rb2d.velocity = new Vector2(-moveSpeed, 0);
             transform.localScale = new Vector2(-1, 1);
-            //sprt.flipX = true;
+            sprt.flipX = true;
         }
         else
         {

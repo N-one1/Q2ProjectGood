@@ -90,6 +90,10 @@ public class HudsonAIPatrol : MonoBehaviour
         newBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(shootSpeed * walkSpeed * Time.fixedDeltaTime, 0f);
         Debug.Log("Shoot");
         canShoot = true;
-
+        if (transform.position.x - player.position.x > 0f)
+        {
+            Debug.Log("bullet flip");
+            newBullet.GetComponent<SpriteRenderer>().flipX = true;
+        }
     }
 }
