@@ -194,25 +194,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &791611400 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5268662318431829650, guid: 4d512b83ad58ffa41afbb46b4cda247c,
-    type: 3}
-  m_PrefabInstance: {fileID: 5268662318852634266}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &791611401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 791611400}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f07d636d0caf53d409b351b00049c797, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 0}
 --- !u!1001 &5009951613743892614
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -404,16 +385,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemySpawnPoint
       objectReference: {fileID: 0}
-    - target: {fileID: 5268662318431829651, guid: 4d512b83ad58ffa41afbb46b4cda247c,
-        type: 3}
-      propertyPath: EnemyList.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5268662318431829651, guid: 4d512b83ad58ffa41afbb46b4cda247c,
-        type: 3}
-      propertyPath: EnemyList.Array.data[0]
-      value: 
-      objectReference: {fileID: 935338578588300124, guid: 39e09875b01c31f45a70302e6db8a4b3,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d512b83ad58ffa41afbb46b4cda247c, type: 3}

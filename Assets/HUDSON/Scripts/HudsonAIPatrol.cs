@@ -15,12 +15,16 @@ public class HudsonAIPatrol : MonoBehaviour
     public Transform groundCheckPos;
     public LayerMask groundLayer;
     public Collider2D bodyCollider;
-    public Transform player, shootPos;
+    public Transform shootPos;
+    private Transform player;
     public GameObject bullet;
+    public GameObject Player;
 
 
     void Start()
     {
+        Player = GameObject.Find("Character(HasAnims)");
+        player = Player.GetComponent<Transform>();
         mustPatrol = true;
         canShoot = true;
     }
@@ -33,7 +37,7 @@ public class HudsonAIPatrol : MonoBehaviour
             Patrol();
         }
 
-        distToPlayer = Vector2.Distance(transform.position, player.position);
+        distToPlayer = Vector2.Distance(transform.position, player.transform.position);
 
         if (distToPlayer <= range)
         {

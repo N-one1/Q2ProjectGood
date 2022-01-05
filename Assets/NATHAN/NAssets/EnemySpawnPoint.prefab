@@ -10,10 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 5268662318431829648}
   - component: {fileID: 5268662318431829651}
+  - component: {fileID: 3335038464687452413}
   m_Layer: 0
   m_Name: EnemySpawnPoint
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -44,5 +45,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyList:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 7942160092366068596, guid: 99bd1aea823de6247a3cc8832a0a2068, type: 3}
+  scoreTracker: {fileID: 0}
+--- !u!114 &3335038464687452413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5268662318431829650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f07d636d0caf53d409b351b00049c797, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 0}
