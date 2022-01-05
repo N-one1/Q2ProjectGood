@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class EnemySpawnerScript : MonoBehaviour
 {
-    [SerializeField] private List<Transform> EnemyList;
+    [SerializeField] private List<GameObject> EnemyList;
+    private GameObject chosenEnemy;
 
     // Start is called before the first frame update
     void Start()
@@ -14,7 +15,7 @@ public class EnemySpawnerScript : MonoBehaviour
 
     private void Awake()
     {
-        Transform chosenEnemy = EnemyList[Random.Range(0, EnemyList.Count)];
+        chosenEnemy = EnemyList[Random.Range(0, EnemyList.Count)];
         
     }
 
@@ -24,8 +25,10 @@ public class EnemySpawnerScript : MonoBehaviour
         
     }
 
-    private Transform SpawnEnemy(Transform chosenEmemy, Vector3 spawnPosition)
+    private Transform SpawnEnemy(GameObject chosenEmemy, Vector3 spawnPosition)
     {
-        Transform Instantiate(chosenEnemy, spawnPosition, Quaternion.identity);
+        
+        GameObject go =  Instantiate(chosenEnemy, spawnPosition, Quaternion.identity);
+        return go.transform;
     }
 }

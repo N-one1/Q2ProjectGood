@@ -404,5 +404,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemySpawnPoint
       objectReference: {fileID: 0}
+    - target: {fileID: 5268662318431829651, guid: 4d512b83ad58ffa41afbb46b4cda247c,
+        type: 3}
+      propertyPath: EnemyList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5268662318431829651, guid: 4d512b83ad58ffa41afbb46b4cda247c,
+        type: 3}
+      propertyPath: EnemyList.Array.data[0]
+      value: 
+      objectReference: {fileID: 935338578588300124, guid: 39e09875b01c31f45a70302e6db8a4b3,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d512b83ad58ffa41afbb46b4cda247c, type: 3}
