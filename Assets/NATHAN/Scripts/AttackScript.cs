@@ -11,10 +11,14 @@ public class AttackScript : MonoBehaviour
     public float attackRange = 0.5f;
     public LayerMask enemyLayer;
 
+    public GameObject scoreTracker;
+    public ScoreTrackingScript scoreScript;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        scoreTracker = GameObject.Find("ScoreTracker");
+        scoreScript = scoreTracker.GetComponent<ScoreTrackingScript>();
     }
 
     // Update is called once per frame
@@ -39,6 +43,9 @@ public class AttackScript : MonoBehaviour
             enemy.GetComponent<EnemyHealthScript>().TakeHit(AttackDamage);
             Debug.Log("Hit" + enemy.name);
             GetComponent<PlayerHealth>().getHealed();
+
+            //score bonus
+            scoreScript.score += 10;
         }
     }
     

@@ -55,6 +55,18 @@ public class DamageScript : MonoBehaviour
                 Destroy(this.gameObject);
             }
         }
+
+        else
+        {
+            if(collision.tag == "Ground")
+            {
+                if (IsProjectile == true)
+                {
+                    Destroy(this.gameObject);
+                }
+            }
+        }
+            
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
