@@ -190,6 +190,7 @@ MonoBehaviour:
   Health: 10
   StartingHealth: 100
   Heal: 20
+  P: {fileID: 510774394642952336}
 --- !u!60 &510774394642952348
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -251,6 +252,8 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 512
+  scoreTracker: {fileID: 0}
+  scoreScript: {fileID: 0}
 --- !u!1 &7944933561174624425
 GameObject:
   m_ObjectHideFlags: 0

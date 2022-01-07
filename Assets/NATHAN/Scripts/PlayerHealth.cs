@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class PlayerHealth : MonoBehaviour
     public float StartingHealth = 100;
     [SerializeField]
     public float Heal = 20;
+    public GameObject P;
 
     // Start is called before the first frame update
     void Start()
@@ -22,8 +24,22 @@ public class PlayerHealth : MonoBehaviour
         if(Health == 0 || Health < 0)
         {
             Debug.Log("Dead");
+            Debug.Log("Switch Scene:");
+            SceneManager.LoadScene("CreditsScene");
+        }
+
+        if (Health >= 151)
+        {
+            Health--;
+        }
+
+        if ((P.GetComponent<Rigidbody2D>().velocity.x+ P.GetComponent<Rigidbody2D>().velocity.y) <= 1)
+        {
+            //Health--;
         }
     }
+
+
 
     public void getHealed()
     {
