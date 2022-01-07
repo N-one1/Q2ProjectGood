@@ -10,6 +10,7 @@ public class NCameraFollow : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Screen.SetResolution(1024, 768, Screen.fullScreen);
         offset = transform.position - player.transform.position;
     }
 
