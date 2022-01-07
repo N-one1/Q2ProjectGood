@@ -130,7 +130,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &52072809
 RectTransform:
   m_ObjectHideFlags: 0
@@ -904,9 +904,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 609446558}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 609446559}
+        m_MethodName: GoToCreditsMenu
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -972,12 +972,12 @@ GameObject:
   - component: {fileID: 852899250}
   - component: {fileID: 852899251}
   m_Layer: 5
-  m_Name: SettingsMenu
+  m_Name: SettingsMenu OFF
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &852899250
 RectTransform:
   m_ObjectHideFlags: 0
