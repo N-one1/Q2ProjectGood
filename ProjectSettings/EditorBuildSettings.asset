@@ -9,9 +9,9 @@ EditorBuildSettings:
     path: Assets/HUDSON/Scenes/Menu UI.unity
     guid: 459afb96712257943b96cf8c39a08bec
   - enabled: 1
-    path: Assets/BEN/Scenes/MainScene.unity
-    guid: 27fdb7746947fc042803fd0f06a75a77
-  - enabled: 1
     path: Assets/NATHAN/Scenes/CreditsScene.unity
     guid: 11e307fc505d7744990273bb53de73e7
+  - enabled: 1
+    path: Assets/BEN/Scenes/MainScene.unity
+    guid: 27fdb7746947fc042803fd0f06a75a77
   m_configObjects: {}
