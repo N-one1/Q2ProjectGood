@@ -11,11 +11,13 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField]
     public float Heal = 20;
     public GameObject P;
+    private float healthDrainTimer;
 
     // Start is called before the first frame update
     void Start()
     {
         Health = StartingHealth;
+        healthDrainTimer = 0;
     }
 
     // Update is called once per frame
@@ -28,14 +30,19 @@ public class PlayerHealth : MonoBehaviour
             SceneManager.LoadScene("CreditsScene");
         }
 
-        if (Health >= 151)
+        if (Health >= 101)
         {
             Health--;
         }
 
         if ((P.GetComponent<Rigidbody2D>().velocity.x+ P.GetComponent<Rigidbody2D>().velocity.y) <= 1)
         {
-            //Health--;
+            healthDrainTimer++;
+        }
+        if (healthDrainTimer >= 10)
+        {
+            HealthDrain();
+            healthDrainTimer -= 10;
         }
     }
 
@@ -45,4 +52,10 @@ public class PlayerHealth : MonoBehaviour
     {
         Health += Heal;
     }
+
+    public void HealthDrain()
+    {
+        Health--;
+    }
+
 }
