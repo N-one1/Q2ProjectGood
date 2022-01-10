@@ -5,11 +5,15 @@ using UnityEngine;
 public class DamageScript : MonoBehaviour
 {
     [SerializeField]
-    public float Damage = 1; 
+    public int Damage = 1; 
     public GameObject Player;
     public PlayerHealth PH;
     //public EnemyHealthScript EH;
     public bool IsProjectile = true;
+    //hp bar mask
+    public GameObject hpBarMask;
+
+    public int Health;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +23,9 @@ public class DamageScript : MonoBehaviour
 
         PH = Player.GetComponent<PlayerHealth>();
         //GetComponent<EnemyHealthScript>();
+
+        hpBarMask = GameObject.Find("HealthBarMask");
+        Health = PH.Health;
     }
 
     // Update is called once per frame
@@ -32,6 +39,7 @@ public class DamageScript : MonoBehaviour
         if(collision.tag == "Player")
         {
             PH.Health -= Damage;
+            hpBarMask.GetComponent<HealthBarMaskScript>().MoveHealthMask(Health, 100);
             Debug.Log("Damage");
             if (IsProjectile == true)
             {

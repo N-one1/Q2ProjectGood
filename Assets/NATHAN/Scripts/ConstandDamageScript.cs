@@ -5,12 +5,16 @@ using UnityEngine;
 public class ConstandDamageScript : MonoBehaviour
 {
     [SerializeField]
-    public float Damage = 1;
+    public int Damage = 1;
     public GameObject Player;
     public PlayerHealth PH; //player health script
     //public EnemyHealthScript EH;
     public int damageRate;
     public int damageRateMax;
+    //hp bar mask
+    public GameObject hpBarMask;
+
+    public int Health;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +24,8 @@ public class ConstandDamageScript : MonoBehaviour
         PH = Player.GetComponent<PlayerHealth>();
         //GetComponent<EnemyHealthScript>();
 
+        hpBarMask = GameObject.Find("HealthBarMask");
+        Health = PH.Health;
     }
 
     // Update is called once per frame
@@ -37,6 +43,7 @@ public class ConstandDamageScript : MonoBehaviour
             if (damageRate > damageRateMax)
             {
                 PH.Health -= Damage;
+                hpBarMask.GetComponent<HealthBarMaskScript>().MoveHealthMask(Health, 100);
                 damageRate = 0;
                 Debug.Log("Damage");
             }

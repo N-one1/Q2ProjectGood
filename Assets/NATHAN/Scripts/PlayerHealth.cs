@@ -5,19 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public float Health = 10;
+    public int Health = 10;
     [SerializeField]
-    public float StartingHealth = 100;
+    public int StartingHealth = 100;
     [SerializeField]
-    public float Heal = 20;
+    public int Heal = 20;
     public GameObject P;
     private float healthDrainTimer;
+    //health bar
+    public GameObject hpBarMask;
 
     // Start is called before the first frame update
     void Start()
     {
         Health = StartingHealth;
         healthDrainTimer = 0;
+
+        hpBarMask = GameObject.Find("HealthBarMask");
     }
 
     // Update is called once per frame
@@ -30,9 +34,9 @@ public class PlayerHealth : MonoBehaviour
             SceneManager.LoadScene("CreditsScene");
         }
 
-        if (Health >= 101)
+        if (Health > 100)
         {
-            Health--;
+            HealthDrain();
         }
 
         if ((P.GetComponent<Rigidbody2D>().velocity.x+ P.GetComponent<Rigidbody2D>().velocity.y) <= 1)
@@ -51,11 +55,13 @@ public class PlayerHealth : MonoBehaviour
     public void getHealed()
     {
         Health += Heal;
+        hpBarMask.GetComponent<HealthBarMaskScript>().MoveHealthMask(Health, 100);
     }
 
     public void HealthDrain()
     {
         Health--;
+        hpBarMask.GetComponent<HealthBarMaskScript>().MoveHealthMask(Health, 100);
     }
 
 }
