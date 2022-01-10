@@ -841,7 +841,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.99215686, g: 0.827451, b: 0.84313726, a: 0}
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -1069,8 +1069,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -250, y: 354}
-  m_SizeDelta: {x: 500, y: 60}
+  m_AnchoredPosition: {x: -385.56, y: 318.43}
+  m_SizeDelta: {x: 252.88358, y: 131.1399}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1149176858
 MonoBehaviour:
@@ -1097,7 +1097,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 5
     m_MaxSize: 50
-    m_Alignment: 3
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -1215,8 +1215,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 452, y: 354}
-  m_SizeDelta: {x: 500, y: 60}
+  m_AnchoredPosition: {x: 385.55994, y: 318.43005}
+  m_SizeDelta: {x: 252.88358, y: 131.1399}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1500519725
 MonoBehaviour:
@@ -1243,7 +1243,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 5
     m_MaxSize: 50
-    m_Alignment: 3
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -1557,21 +1557,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ColliderPaths.Array.data[0].m_ColliderPaths.Array.data[0].Array.data[9].Y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6757828507161991192, guid: cfa54e73d3890bf4f878e1cad970132c,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 0.990566
-      objectReference: {fileID: 0}
-    - target: {fileID: 6757828507161991192, guid: cfa54e73d3890bf4f878e1cad970132c,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.82702917
-      objectReference: {fileID: 0}
-    - target: {fileID: 6757828507161991192, guid: cfa54e73d3890bf4f878e1cad970132c,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0.842071
       objectReference: {fileID: 0}
     - target: {fileID: 9218439427641799059, guid: cfa54e73d3890bf4f878e1cad970132c,
         type: 3}
