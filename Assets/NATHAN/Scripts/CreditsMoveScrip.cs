@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CreditsMoveScrip : MonoBehaviour
 {
@@ -23,9 +24,10 @@ public class CreditsMoveScrip : MonoBehaviour
             creditsMove++; 
             if ((creditsMove == creditsMoveMax))
             {
-                Debug.Log("Credits Camera Resset");
-                transform.position = new Vector3(transform.position.x, transform.position.y + 60, transform.position.z);
-                creditsMove -= 7;
+                //Debug.Log("Credits Camera Resset");
+                //transform.position = new Vector3(transform.position.x, transform.position.y + 60, transform.position.z);
+                //creditsMove -= 7;
+                SceneManager.LoadScene("Menu UI");
             }
             else
             {
