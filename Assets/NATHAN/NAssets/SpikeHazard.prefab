@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6262091191027224571}
   - component: {fileID: 6556228486420671168}
   m_Layer: 8
-  m_Name: Spike
+  m_Name: SpikeHazard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 237011e240accf04eb994182aa7db1b9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d60d8316895df0548864002d4e38a058, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,6 +100,8 @@ MonoBehaviour:
   PH: {fileID: 0}
   damageRate: 0
   damageRateMax: 0
+  hpBarMask: {fileID: 0}
+  Health: 0
 --- !u!60 &6673306218628537659
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -125,9 +127,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0, y: 0.5}
-      - {x: -0.4330127, y: -0.25000003}
-      - {x: 0.43301272, y: -0.24999996}
+    - - {x: 0.22974047, y: 0.114728525}
+      - {x: -0.009417732, y: 0.396405}
+      - {x: -0.2912986, y: -0.0007970147}
+      - {x: -0.4942279, y: -0.4901519}
+      - {x: 0.40005073, y: -0.49015182}
 --- !u!60 &6262091191027224571
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -153,9 +157,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0, y: 0.5}
-      - {x: -0.4330127, y: -0.25000003}
-      - {x: 0.43301272, y: -0.24999996}
+    - - {x: 0.22912867, y: 0.099627756}
+      - {x: -0.0047087967, y: 0.38698724}
+      - {x: -0.28970867, y: 0.00055423006}
+      - {x: -0.48481014, y: -0.49956965}
+      - {x: 0.38121527, y: -0.49956957}
 --- !u!50 &6556228486420671168
 Rigidbody2D:
   serializedVersion: 4
