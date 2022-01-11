@@ -456,22 +456,22 @@ Tilemap:
   m_AnimatedTiles: {}
   m_TileAssetArray:
   - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 473f0d06e9499b84da7f1ca7bee8c182, type: 2}
+    m_Data: {fileID: 11400000, guid: 36304ba1cabcc2740a906137be7844bb, type: 2}
   - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: c403b25164cf7734cabf7131e688eace, type: 2}
+    m_Data: {fileID: 11400000, guid: 89d9339dfd4b6a34ab96c181893ca2c2, type: 2}
   - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 0e45045ac009715459e687e42af35514, type: 2}
+    m_Data: {fileID: 11400000, guid: 51ed2367e43eb014bbd26727a82a5ad5, type: 2}
   - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: a2a1634414f0ad44ba849b60a57efb1c, type: 2}
+    m_Data: {fileID: 11400000, guid: eb28f47c5cfdaba41bfca7b2047f2266, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: 529852678a3db0f40b38e476715e8337, type: 3}
+    m_Data: {fileID: 21300000, guid: 9b32bca3ab3e8ce4abcfc52374171dd1, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: 21300002, guid: 529852678a3db0f40b38e476715e8337, type: 3}
+    m_Data: {fileID: 21300002, guid: 9b32bca3ab3e8ce4abcfc52374171dd1, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: 21300004, guid: 529852678a3db0f40b38e476715e8337, type: 3}
+    m_Data: {fileID: 21300004, guid: 9b32bca3ab3e8ce4abcfc52374171dd1, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: 21300006, guid: 529852678a3db0f40b38e476715e8337, type: 3}
+    m_Data: {fileID: 21300006, guid: 9b32bca3ab3e8ce4abcfc52374171dd1, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 4
     m_Data:
@@ -495,7 +495,7 @@ Tilemap:
   - m_RefCount: 4
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8235294, g: 0.8235294, b: 0.8235294, a: 1}
   m_Origin: {x: 0, y: 0, z: 0}
   m_Size: {x: 19, y: 2, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -603,14 +603,14 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 1280841830976068745}
     m_ColliderPaths:
-    - - X: 170000000
-        Y: 20000000
-      - X: 130000000
-        Y: 20000000
-      - X: 130000000
+    - - X: 130000000
         Y: 10000000
       - X: 170000000
         Y: 10000000
+      - X: 170000000
+        Y: 20000000
+      - X: 130000000
+        Y: 20000000
   m_CompositePaths:
     m_Paths:
     - - {x: 17, y: 2}
