@@ -12,8 +12,13 @@ public class PlayerHealth : MonoBehaviour
     public int Heal = 20;
     public GameObject P;
     private float healthDrainTimer;
+    private float maxHealth = 100;
     //health bar
     public GameObject hpBarMask;
+
+    //score
+    public GameObject scoreTracker;
+    public float s;
 
     // Start is called before the first frame update
     void Start()
@@ -22,11 +27,21 @@ public class PlayerHealth : MonoBehaviour
         healthDrainTimer = 0;
 
         hpBarMask = GameObject.Find("HealthBarMask");
+
+        scoreTracker = GameObject.Find("ScoreTracker");
+        s = scoreTracker.GetComponent<ScoreTrackingScript>().score;
     }
 
     // Update is called once per frame
     void Update()
     {
+        s = scoreTracker.GetComponent<ScoreTrackingScript>().score;
+        //if (score/10.0f > 100)
+        //{
+        //    maxHealth = (score / 10.0f);
+        //}
+        maxHealth = Mathf.Clamp(s , 100, 100);
+
         if(Health == 0 || Health < 0)
         {
             Debug.Log("Dead");
@@ -34,19 +49,20 @@ public class PlayerHealth : MonoBehaviour
             SceneManager.LoadScene("CreditsScene");
         }
 
-        if (Health > 100)
+        if (Health > maxHealth)
         {
             HealthDrain();
+            Debug.Log(maxHealth);
         }
 
         if ((P.GetComponent<Rigidbody2D>().velocity.x+ P.GetComponent<Rigidbody2D>().velocity.y) <= 1)
         {
             healthDrainTimer++;
         }
-        if (healthDrainTimer >= 10)
+        if (healthDrainTimer >= 15)
         {
             HealthDrain();
-            healthDrainTimer -= 10;
+            healthDrainTimer -= 15;
         }
     }
 

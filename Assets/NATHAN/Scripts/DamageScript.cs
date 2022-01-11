@@ -15,6 +15,7 @@ public class DamageScript : MonoBehaviour
 
     public int Health;
 
+
     // Start is called before the first frame update
     void Start()
     {
