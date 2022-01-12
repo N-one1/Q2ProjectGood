@@ -490,6 +490,7 @@ MonoBehaviour:
   jumpPower: 10
   moveSpeed: 10
   fallMultiplier: 2.5
+  jumpSound: {fileID: 0}
 --- !u!50 &159296338
 Rigidbody2D:
   serializedVersion: 4
@@ -3269,7 +3270,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1e2c44d2d6b9a004890166311956e32b, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -4568,6 +4569,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CameraFilterSides
       objectReference: {fileID: 0}
+    - target: {fileID: 2216076905981328486, guid: 19e61e86ca706a94f8da415dfdf80646,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2216076905981328487, guid: 19e61e86ca706a94f8da415dfdf80646,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5292,6 +5298,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CameraFilterTop/Bottom
+      objectReference: {fileID: 0}
+    - target: {fileID: 6218474436386404148, guid: b7e3feb1581cec24683926b2a61a2d77,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6218474436386404149, guid: b7e3feb1581cec24683926b2a61a2d77,
         type: 3}

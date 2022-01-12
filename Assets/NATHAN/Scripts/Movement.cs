@@ -26,9 +26,16 @@ public class Movement : MonoBehaviour
 
     private bool facingRight = true;
 
+    public AudioSource jumpSound;
+
     // anim stuff ---------------------------------------------------------------------------------------------
     Animator a;
     bool Grounded = false;
+
+    public class AudioScript : MonoBehaviour
+    {
+        AudioSource audioSource;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -60,14 +67,24 @@ public class Movement : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
         if (Input.GetButtonDown("Jump") && IsGrounded() == true && extraJumps > 0) //jump function//
         {
+            Debug.Log("jump sound");
             rb.velocity = new Vector2(rb.velocity.x, jumpPower);
+            Debug.Log("jump sound");
             extraJumps--;
+            Debug.Log("jump sound");
+            jumpSound.Play();
+            Debug.Log("jump sound");
         }
 
         if (Input.GetButtonDown("Jump") && IsGrounded() == false && extraJumps > 1) //jump counter
         {
+            Debug.Log("jump sound");
             rb.velocity = new Vector2(rb.velocity.x, jumpPower);
+            Debug.Log("jump sound");
             extraJumps--;
+            Debug.Log("jump sound");
+            jumpSound.Play();
+            Debug.Log("jump sound");
         }
 
         Flip();
@@ -77,6 +94,7 @@ public class Movement : MonoBehaviour
             if(rb.velocity.y > 0)
             {
                 rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * jumpCut);
+                //Debug.Log("jump cut");
             }
         }
 

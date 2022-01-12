@@ -14,6 +14,12 @@ public class AttackScript : MonoBehaviour
     public GameObject scoreTracker;
     public ScoreTrackingScript scoreScript;
 
+    public AudioSource biteSound;
+    public class AudioScript : MonoBehaviour
+    {
+        AudioSource audioSource;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +49,8 @@ public class AttackScript : MonoBehaviour
             enemy.GetComponent<EnemyHealthScript>().TakeHit(AttackDamage);
             Debug.Log("Hit" + enemy.name);
             GetComponent<PlayerHealth>().getHealed();
+
+            biteSound.Play();
 
             //score bonus
             scoreScript.score += 10;
