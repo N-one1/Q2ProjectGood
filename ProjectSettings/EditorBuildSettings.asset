@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/NATHAN/Scenes/CreditsScene.unity
     guid: 11e307fc505d7744990273bb53de73e7
+  - enabled: 1
+    path: Assets/NATHAN/Scenes/GameOverScene.unity
+    guid: 7ff4743eaef3cb64290773618633c921
   m_configObjects: {}

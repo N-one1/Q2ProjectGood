@@ -46,7 +46,7 @@ public class PlayerHealth : MonoBehaviour
         {
             Debug.Log("Dead");
             Debug.Log("Switch Scene:");
-            SceneManager.LoadScene("CreditsScene");
+            SceneManager.LoadScene("GameOverScene");
         }
 
         if (Health > maxHealth)
