@@ -1239,12 +1239,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4201097726190338324}
   m_PrefabAsset: {fileID: 0}
---- !u!50 &1811572135 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 7701771420188340670, guid: 4e725ac762599c94ba76ee926a1e8548,
-    type: 3}
-  m_PrefabInstance: {fileID: 7701771421678998553}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2101447320
 GameObject:
   m_ObjectHideFlags: 0
@@ -1511,21 +1505,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4459986186648324004, guid: 4e725ac762599c94ba76ee926a1e8548,
-        type: 3}
-      propertyPath: walkSpeed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4459986186648324004, guid: 4e725ac762599c94ba76ee926a1e8548,
-        type: 3}
-      propertyPath: range
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4459986186648324004, guid: 4e725ac762599c94ba76ee926a1e8548,
-        type: 3}
-      propertyPath: rb
-      value: 
-      objectReference: {fileID: 1811572135}
     - target: {fileID: 7701771420188340656, guid: 4e725ac762599c94ba76ee926a1e8548,
         type: 3}
       propertyPath: m_LocalPosition.x
