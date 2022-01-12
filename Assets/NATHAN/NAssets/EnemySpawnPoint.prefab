@@ -46,6 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyList:
   - {fileID: 7942160092366068596, guid: 99bd1aea823de6247a3cc8832a0a2068, type: 3}
+  - {fileID: 7701771420188340669, guid: 4e725ac762599c94ba76ee926a1e8548, type: 3}
+  - {fileID: 7701771420188340669, guid: 4e725ac762599c94ba76ee926a1e8548, type: 3}
   scoreTracker: {fileID: 0}
 --- !u!114 &3335038464687452413
 MonoBehaviour:
