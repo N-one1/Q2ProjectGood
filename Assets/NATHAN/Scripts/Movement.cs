@@ -65,27 +65,27 @@ public class Movement : MonoBehaviour
         }
 
         horizontal = Input.GetAxisRaw("Horizontal");
-        if (Input.GetButtonDown("Jump") && IsGrounded() == true && extraJumps > 0) //jump function//
-        {
-            Debug.Log("jump sound");
-            rb.velocity = new Vector2(rb.velocity.x, jumpPower);
-            Debug.Log("jump sound");
-            extraJumps--;
-            Debug.Log("jump sound");
-            jumpSound.Play();
-            Debug.Log("jump sound");
-        }
+        //if (Input.GetButtonDown("Jump") && IsGrounded() == true && extraJumps > 0) //jump function//
+        //{
+        //    Debug.Log("jump sound");
+        //    rb.velocity = new Vector2(rb.velocity.x, jumpPower);
+        //    //Debug.Log("jump sound");
+        //    extraJumps--;
+        //    //Debug.Log("jump sound");
+        //    jumpSound.Play();
+        //    //.Log("jump sound");
+        //}
 
-        if (Input.GetButtonDown("Jump") && IsGrounded() == false && extraJumps > 1) //jump counter
-        {
-            Debug.Log("jump sound");
-            rb.velocity = new Vector2(rb.velocity.x, jumpPower);
-            Debug.Log("jump sound");
-            extraJumps--;
-            Debug.Log("jump sound");
-            jumpSound.Play();
-            Debug.Log("jump sound");
-        }
+        //if (Input.GetButtonDown("Jump") && IsGrounded() == false && extraJumps > 1) //jump counter
+        //{
+        //    Debug.Log("jump sound 2");
+        //    rb.velocity = new Vector2(rb.velocity.x, jumpPower);
+        //    //Debug.Log("jump sound 2");
+        //    extraJumps--;
+        //    //Debug.Log("jump sound 2");
+        //    jumpSound.Play();
+        //    //Debug.Log("jump sound 2");
+        //}
 
         Flip();
 
@@ -115,11 +115,12 @@ public class Movement : MonoBehaviour
             jumpStorage = jumpStorageTime;
         }
 
-        if((jumpStorage > 0) && (cayoteRemember > 0))
+        if((jumpStorage > 0) && (cayoteRemember > 0))  //Jump?????????????????????????????
         {
             jumpStorage = 0;
             cayoteRemember = 0;
             rb.velocity = new Vector2(rb.velocity.x, jumpPower);
+            jumpSound.Play();
         }
 
         //fast fall
