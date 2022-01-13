@@ -12,9 +12,9 @@ public class HudsonGAMEOVER : MonoBehaviour
     }
 
 
-    public void GoToCreditsMenu()
+    public void GoToMainMenu()
     {
-        SceneManager.LoadScene("CreditsScene");
+        SceneManager.LoadScene("Menu UI");
     }
 
     public void QuitGame()
