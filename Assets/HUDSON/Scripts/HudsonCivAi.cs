@@ -21,6 +21,9 @@ public class HudsonCivAi : MonoBehaviour
     public GameObject Player;
     int randomInt;
 
+    public LayerMask ground; //helps stop air jumping
+
+
 
     void Start()
     {
@@ -37,15 +40,15 @@ public class HudsonCivAi : MonoBehaviour
         //Random # Generator
         float randomInt = Random.Range(0, 120);
 
+        if((randomInt <= 15)&&(IsGrounded() == true))
+        {
+            Debug.Log("jumping ai");
+            rb.AddForce(Vector2.up * 500);
+        }
+
         if (mustPatrol)
         {
             Patrol();
-        }
-
-        if(randomInt > 15)
-        {
-            Debug.Log("jumping ai");
-            rb.AddForce(Vector2.up * 100);
         }
 
         distToPlayer = Vector2.Distance(transform.position, player.transform.position);
@@ -62,8 +65,10 @@ public class HudsonCivAi : MonoBehaviour
             mustPatrol = false;
             rb.velocity = new Vector2(-walkSpeed * Time.fixedDeltaTime, rb.velocity.y);
 
-            // if (canShoot)
-            //   StartCoroutine(Shoot());
+            if (canShoot)
+            {
+                //   StartCoroutine(Shoot());
+            }
         }
         else
         {
@@ -76,7 +81,7 @@ public class HudsonCivAi : MonoBehaviour
     {
         if (mustPatrol)
         {
-            mustTurn = !Physics2D.OverlapCircle(groundCheckPos.position, 0.1f, groundLayer);
+            bool mustTurn = !Physics2D.OverlapCircle(groundCheckPos.position, 0.1f, groundLayer);
         }
     }
     void Patrol()
@@ -114,5 +119,10 @@ public class HudsonCivAi : MonoBehaviour
 
 
 
+    }
+    public bool IsGrounded()
+    {
+        bool grounded = Physics2D.BoxCast(transform.position + new Vector3(0f, 0f, 0f), new Vector3(1.5f, 1f, 0f), 0, Vector2.down, 0.7f, ground);
+        return grounded;
     }
 }

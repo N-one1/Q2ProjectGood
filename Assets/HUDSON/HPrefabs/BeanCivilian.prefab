@@ -229,6 +229,9 @@ MonoBehaviour:
   shootPos: {fileID: 0}
   bullet: {fileID: 0}
   Player: {fileID: 510774394642952336, guid: 77fa19db9819de344b650d593bcf122a, type: 3}
+  ground:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!58 &5207878560589700048
 CircleCollider2D:
   m_ObjectHideFlags: 0
