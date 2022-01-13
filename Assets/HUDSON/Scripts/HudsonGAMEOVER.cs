@@ -17,12 +17,6 @@ public class HudsonGAMEOVER : MonoBehaviour
         SceneManager.LoadScene("CreditsScene");
     }
 
-
-    public void GoToMainMenu()
-    {
-        SceneManager.LoadScene("Menu UI");
-    }
-
     public void QuitGame()
     {
         Application.Quit();
