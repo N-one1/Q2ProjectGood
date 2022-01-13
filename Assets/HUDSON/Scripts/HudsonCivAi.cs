@@ -28,14 +28,24 @@ public class HudsonCivAi : MonoBehaviour
         player = Player.GetComponent<Transform>();
         mustPatrol = true;
         canShoot = true;
+        
     }
 
 
     void Update()
     {
+        //Random # Generator
+        float randomInt = Random.Range(0, 120);
+
         if (mustPatrol)
         {
             Patrol();
+        }
+
+        if(randomInt > 15)
+        {
+            Debug.Log("jumping ai");
+            rb.AddForce(Vector2.up * 100);
         }
 
         distToPlayer = Vector2.Distance(transform.position, player.transform.position);
