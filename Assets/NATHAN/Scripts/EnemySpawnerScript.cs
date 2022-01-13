@@ -20,15 +20,16 @@ public class EnemySpawnerScript : MonoBehaviour
         //s = scoreTracker.GetComponent<ScoreTrackingScript>();
         float x = transform.position.x;
         float maxX = 500;
-
-        float percent = Mathf.Clamp(x / maxX, -0.5f, 0.9f);
-        float dice = Random.Range(0.1f, 1.0f);
-        Debug.Log("diceRoll"+dice);
-        if(dice < percent)
+        if (x > 20)
         {
-            SpawnEnemy(chosenEnemy = EnemyList[Random.Range(0, EnemyList.Count)],this.transform.position);
+            float percent = Mathf.Clamp(x / maxX, -0.5f, 0.9f);
+            float dice = Random.Range(0.01f, 1.00f);
+            Debug.Log("diceRoll" + dice);
+            if (dice < percent)
+            {
+                SpawnEnemy(chosenEnemy = EnemyList[Random.Range(0, EnemyList.Count)], this.transform.position);
+            }
         }
-
 
 
         //Debug.Log(x);
