@@ -772,7 +772,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: d3b17d293f90f664b8b19bf33ac6bb74, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -906,7 +906,7 @@ GameObject:
   - component: {fileID: 1051386433}
   - component: {fileID: 1051386435}
   - component: {fileID: 1051386434}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: HealthBarMask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1490,6 +1490,11 @@ PrefabInstance:
       propertyPath: m_ColliderPaths.Array.data[0].m_ColliderPaths.Array.data[0].Array.data[9].Y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7132367911810927549, guid: cfa54e73d3890bf4f878e1cad970132c,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9218439427641799059, guid: cfa54e73d3890bf4f878e1cad970132c,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -1505,6 +1510,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3191992907179597405, guid: 4e725ac762599c94ba76ee926a1e8548,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6981167725773099203, guid: 4e725ac762599c94ba76ee926a1e8548,
+        type: 3}
+      propertyPath: walkSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6981167725773099203, guid: 4e725ac762599c94ba76ee926a1e8548,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7701771420188340656, guid: 4e725ac762599c94ba76ee926a1e8548,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1574,6 +1594,11 @@ PrefabInstance:
         type: 3}
       propertyPath: agroRange
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7701771420188340659, guid: 4e725ac762599c94ba76ee926a1e8548,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7701771420188340669, guid: 4e725ac762599c94ba76ee926a1e8548,
         type: 3}

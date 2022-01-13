@@ -43,9 +43,9 @@ GameObject:
   - component: {fileID: 7701771420188340670}
   - component: {fileID: 7701771420188340671}
   - component: {fileID: 7701771420188340668}
-  - component: {fileID: 7701771420188340659}
   - component: {fileID: 3191992907179597405}
   - component: {fileID: 6981167725773099203}
+  - component: {fileID: 5207878560589700048}
   m_Layer: 9
   m_Name: BeanCivilian
   m_TagString: Untagged
@@ -107,7 +107,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: bbade33e285553a4185c633e5b0a6574, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.9, y: 1.08}
@@ -189,22 +189,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9, y: 0.1230731}
   m_EdgeRadius: 0
---- !u!114 &7701771420188340659
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7701771420188340669}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd6c36b71cd3b4c4287df578b2529997, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  face: {fileID: 0}
-  player: {fileID: 0}
-  agroRange: 0
-  moveSpeed: 0
 --- !u!114 &3191992907179597405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,8 +215,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77a5b5b4d2cac7b4182387037044a797, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 100
-  range: 0
+  walkSpeed: 250
+  range: 20
   timeBTWShots: 0
   shootSpeed: 0
   mustPatrol: 0
@@ -240,8 +224,24 @@ MonoBehaviour:
   groundCheckPos: {fileID: 5017137766608635503}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   bodyCollider: {fileID: 7701771420188340668}
   shootPos: {fileID: 0}
   bullet: {fileID: 0}
-  Player: {fileID: 0}
+  Player: {fileID: 510774394642952336, guid: 77fa19db9819de344b650d593bcf122a, type: 3}
+--- !u!58 &5207878560589700048
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7701771420188340669}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5

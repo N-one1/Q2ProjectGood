@@ -19,6 +19,7 @@ public class HudsonCivAi : MonoBehaviour
     private Transform player;
     public GameObject bullet;
     public GameObject Player;
+    int randomInt;
 
 
     void Start()
@@ -41,17 +42,18 @@ public class HudsonCivAi : MonoBehaviour
 
         if (distToPlayer <= range)
         {
-            if (player.position.x < transform.position.x && transform.localScale.x > 0
-                || player.position.x > transform.position.x && transform.localScale.x < 0)
+            if (player.position.x > transform.position.x && transform.localScale.x < 0
+                || player.position.x < transform.position.x && transform.localScale.x > 0)
             {
                 Flip();
+               // transform.GlocalPosition.(1, 0, 0);
             }
 
             mustPatrol = false;
-            rb.velocity = Vector2.zero;
+            rb.velocity = new Vector2(-walkSpeed * Time.fixedDeltaTime, rb.velocity.y);
 
-           // if (canShoot)
-             //   StartCoroutine(Shoot());
+            // if (canShoot)
+            //   StartCoroutine(Shoot());
         }
         else
         {
@@ -99,5 +101,8 @@ public class HudsonCivAi : MonoBehaviour
             Debug.Log("bullet flip");
             newBullet.GetComponent<SpriteRenderer>().flipX = true;
         }
+
+
+
     }
 }
