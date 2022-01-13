@@ -49,7 +49,20 @@ public class PlayerHealth : MonoBehaviour
             SceneManager.LoadScene("GameOverScene");
         }
 
-        if (Health > maxHealth)
+        if (Health > (maxHealth + 10))
+        {
+            HealthDrain(); //1
+            HealthDrain(); //2
+            HealthDrain(); //3
+            HealthDrain(); //4
+            HealthDrain(); //5
+            HealthDrain(); //6
+            HealthDrain(); //7
+            HealthDrain(); //8
+            HealthDrain(); //9
+            HealthDrain(); //10
+        }
+        else if (Health > maxHealth)
         {
             HealthDrain();
             Debug.Log(maxHealth);
