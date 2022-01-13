@@ -418,7 +418,7 @@ MonoBehaviour:
     m_Bits: 256
   bodyCollider: {fileID: 7942160092366068602}
   shootPos: {fileID: 7942160091828186135}
-  bullet: {fileID: 7806423558566135992, guid: c0e61b7d14df464458f7d9fe5e3b4268, type: 3}
+  bullet: {fileID: 1753745357326987662, guid: 5186ee4f20cf62947b87775de1bbd164, type: 3}
   Player: {fileID: 0}
 --- !u!1 &7942160092671167809
 GameObject:
