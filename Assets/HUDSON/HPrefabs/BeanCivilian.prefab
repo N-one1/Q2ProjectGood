@@ -45,7 +45,6 @@ GameObject:
   - component: {fileID: 7701771420188340668}
   - component: {fileID: 3191992907179597405}
   - component: {fileID: 6981167725773099203}
-  - component: {fileID: 5207878560589700048}
   - component: {fileID: 7157264172213372961}
   - component: {fileID: 4433355646510041460}
   - component: {fileID: 8256742171613516771}
@@ -206,6 +205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: 10
   StartingHealth: 10
+  DieSound: {fileID: 0}
 --- !u!114 &6981167725773099203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,22 +235,6 @@ MonoBehaviour:
   ground:
     serializedVersion: 2
     m_Bits: 256
---- !u!58 &5207878560589700048
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7701771420188340669}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!95 &7157264172213372961
 Animator:
   serializedVersion: 3
@@ -277,10 +261,11 @@ Animation:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7701771420188340669}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Animation: {fileID: 7400000, guid: 57dc5b4146a952f428d9ef296882ecdf, type: 2}
-  m_Animations: []
+  m_Animations:
+  - {fileID: 7400000, guid: 57dc5b4146a952f428d9ef296882ecdf, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -292,7 +277,7 @@ PlayableDirector:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7701771420188340669}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: ca589e11aa0e9f749af00a04dbb84909, type: 2}
   m_InitialState: 1
