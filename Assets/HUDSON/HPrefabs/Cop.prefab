@@ -507,7 +507,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: 10
   StartingHealth: 10
-  DieSound: {fileID: 2993361050522237712}
+  owSound: {fileID: 0}
 --- !u!114 &7942160092366068606
 MonoBehaviour:
   m_ObjectHideFlags: 0
