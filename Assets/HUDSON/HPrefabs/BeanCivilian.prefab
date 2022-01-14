@@ -371,7 +371,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7701771420188340669}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 8175f86f45d039643af3a5737770a5e8, type: 2}
   m_CullingMode: 0
@@ -389,7 +389,7 @@ Animation:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7701771420188340669}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Animation: {fileID: 7400000, guid: 57dc5b4146a952f428d9ef296882ecdf, type: 2}
   m_Animations:
@@ -405,12 +405,12 @@ PlayableDirector:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7701771420188340669}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: ca589e11aa0e9f749af00a04dbb84909, type: 2}
   m_InitialState: 1
   m_WrapMode: 1
-  m_DirectorUpdateMode: 1
+  m_DirectorUpdateMode: 2
   m_InitialTime: 0
   m_SceneBindings:
   - key: {fileID: 114086461574573352, guid: ca589e11aa0e9f749af00a04dbb84909, type: 2}
