@@ -13,6 +13,7 @@ public class PlayerHealth : MonoBehaviour
     public GameObject P;
     private float healthDrainTimer;
     private float maxHealth = 100;
+    public GameObject GameOverScene;
     //health bar
     public GameObject hpBarMask;
 
@@ -30,6 +31,7 @@ public class PlayerHealth : MonoBehaviour
 
         scoreTracker = GameObject.Find("ScoreTracker");
         s = scoreTracker.GetComponent<ScoreTrackingScript>().score;
+        Time.timeScale = 1;
     }
 
     // Update is called once per frame
@@ -46,7 +48,9 @@ public class PlayerHealth : MonoBehaviour
         {
             Debug.Log("Dead");
             Debug.Log("Switch Scene:");
-            SceneManager.LoadScene("GameOverScene");
+            //SceneManager.LoadScene("GameOverScene");
+            GameOverScene.SetActive(true);
+            Time.timeScale = 0;
         }
 
         if (Health > (maxHealth + 10))
