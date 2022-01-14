@@ -19,7 +19,12 @@ public class HudsonAIPatrol : MonoBehaviour
     private Transform player;
     public GameObject bullet;
     public GameObject Player;
+    public AudioSource pewSound;
 
+    public class AudioScript : MonoBehaviour
+    {
+        AudioSource audioSource;
+    }
 
     void Start()
     {
@@ -89,6 +94,7 @@ public class HudsonAIPatrol : MonoBehaviour
         canShoot = false;
 
         yield return new WaitForSeconds(timeBTWShots);
+        pewSound.Play();
         GameObject newBullet = Instantiate(bullet, shootPos.position, Quaternion.identity);
 
         newBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(shootSpeed * walkSpeed * Time.fixedDeltaTime, 0f);
