@@ -53,7 +53,7 @@ public class AttackScript : MonoBehaviour
             biteSound.Play();
 
             //score bonus
-            scoreScript.score += 10;
+            scoreScript.points += 10;
         }
     }
     

@@ -9,6 +9,8 @@ public class ScoreTrackingScript : MonoBehaviour
     public float score;
     private float distance;
     public Text scoreText;
+    public float scoreTrue;
+    public float points;
 
     public GameObject Player;
     public PlayerHealth PH;
@@ -35,9 +37,11 @@ public class ScoreTrackingScript : MonoBehaviour
             score++;
         }
 
+        scoreTrue = score + points;
+
         hp = PH.Health;
 
-        scoreText.text = "Score: " + score;
+        scoreText.text = "Score: " + scoreTrue;
         healthText.text = "Sugar: " + hp;
     }
 }
