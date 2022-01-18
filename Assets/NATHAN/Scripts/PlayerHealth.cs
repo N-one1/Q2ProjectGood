@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour
 {
     public int Health = 10;
+    public int HP;
     [SerializeField]
     public int StartingHealth = 100;
     [SerializeField]
@@ -37,6 +38,15 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Health > 0)
+        {
+            HP = Health;
+        }
+        else
+        {
+            HP = 0;
+        }
+
         s = scoreTracker.GetComponent<ScoreTrackingScript>().score;
         //if (score/10.0f > 100)
         //{
