@@ -21,6 +21,10 @@ public class HudsonAIPatrol : MonoBehaviour
     public GameObject Player;
     public AudioSource pewSound;
 
+    // anim stuff ---------------------------------------------------------------------------------------------
+    Animator a;
+    bool isShooting = false;
+
     public class AudioScript : MonoBehaviour
     {
         AudioSource audioSource;
@@ -32,11 +36,18 @@ public class HudsonAIPatrol : MonoBehaviour
         player = Player.GetComponent<Transform>();
         mustPatrol = true;
         canShoot = true;
+
+        // anim stuff ---------------------------------------------------------------------------------------------
+        a = GetComponent<Animator>();
     }
 
 
     void Update()
     {
+        // anim stuff ---------------------------------------------------------------------------------------------
+        a.SetFloat("yVelocity", rb.velocity.y);
+        a.SetBool("IsShooting", isShooting);
+
         if (mustPatrol)
         {
             Patrol();
@@ -57,10 +68,12 @@ public class HudsonAIPatrol : MonoBehaviour
 
             if(canShoot)
             StartCoroutine(Shoot());
+            bool isShooting = true;
         }
         else
         {
             mustPatrol = true;
+            bool isShooting = false;
         }
 
     }

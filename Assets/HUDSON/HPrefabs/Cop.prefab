@@ -345,6 +345,7 @@ GameObject:
   - component: {fileID: 7942160092366068601}
   - component: {fileID: 7942160092366068606}
   - component: {fileID: 7942160092366068607}
+  - component: {fileID: 2846621194319045099}
   m_Layer: 9
   m_Name: Cop
   m_TagString: Untagged
@@ -551,6 +552,25 @@ MonoBehaviour:
   bullet: {fileID: 7806423558566135992, guid: c0e61b7d14df464458f7d9fe5e3b4268, type: 3}
   Player: {fileID: 0}
   pewSound: {fileID: 57722082048450738}
+--- !u!95 &2846621194319045099
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7942160092366068596}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6bf78c01cb6817540aaa14407aa3e55e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7942160092671167809
 GameObject:
   m_ObjectHideFlags: 0
