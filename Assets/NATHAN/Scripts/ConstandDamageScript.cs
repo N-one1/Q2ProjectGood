@@ -13,7 +13,7 @@ public class ConstandDamageScript : MonoBehaviour
     public int damageRateMax;
     //hp bar mask
     public GameObject hpBarMask;
-
+    public AudioSource ouchSource;
     public int Health;
 
     // Start is called before the first frame update
@@ -28,17 +28,25 @@ public class ConstandDamageScript : MonoBehaviour
         Health = PH.Health;
     }
 
+    public class AudioScript : MonoBehaviour
+    {
+        AudioSource audioSource;
+    }
     // Update is called once per frame
     void Update()
     {
         
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        ouchSource.Play();
+    }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
-
             damageRate ++;
             if (damageRate > damageRateMax)
             {

@@ -15,6 +15,7 @@ public class DamageScript : MonoBehaviour
 
     public int Health;
 
+    public AudioSource ouchSound;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +30,10 @@ public class DamageScript : MonoBehaviour
         Health = PH.Health;
     }
 
+    public class AudioScript : MonoBehaviour
+    {
+        AudioSource audioSource;
+    }
     // Update is called once per frame
     void Update()
     {
