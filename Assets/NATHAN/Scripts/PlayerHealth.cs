@@ -17,6 +17,8 @@ public class PlayerHealth : MonoBehaviour
     public GameObject GameOverScene;
     //health bar
     public GameObject hpBarMask;
+    public GameObject bullet;
+    public AudioSource ow;
 
     //score
     public GameObject scoreTracker;
@@ -35,10 +37,16 @@ public class PlayerHealth : MonoBehaviour
         Time.timeScale = 1;
     }
 
-    // Update is called once per frame
-    void Update()
+    public class AudioScript : MonoBehaviour
     {
-        if (Health > 0)
+        AudioSource audioSource;
+    }
+
+        // Update is called once per frame
+        void Update()
+    {
+
+            if (Health > 0)
         {
             HP = Health;
         }

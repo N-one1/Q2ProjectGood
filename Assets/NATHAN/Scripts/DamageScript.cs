@@ -12,7 +12,6 @@ public class DamageScript : MonoBehaviour
     public bool IsProjectile = true;
     //hp bar mask
     public GameObject hpBarMask;
-
     public int Health;
 
     public AudioSource ouchSound;
