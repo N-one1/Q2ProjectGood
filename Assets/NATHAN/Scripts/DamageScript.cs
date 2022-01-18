@@ -14,7 +14,12 @@ public class DamageScript : MonoBehaviour
     public GameObject hpBarMask;
     public int Health;
 
-    public AudioSource ouchSound;
+    [SerializeField]
+    public GameObject OuchSoundMaker;
+    [SerializeField]
+    public GameObject OuchSoundSpawnPoint;
+    [SerializeField]
+    public GameObject OuchSound;
 
     // Start is called before the first frame update
     void Start()
@@ -43,6 +48,9 @@ public class DamageScript : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
+            GameObject OuchSound  = Instantiate(OuchSoundMaker, OuchSoundSpawnPoint.transform.position, Quaternion.identity);
+
+
             PH.Health -= Damage;
             hpBarMask.GetComponent<HealthBarMaskScript>().MoveHealthMask(Health, 100);
             Debug.Log("Damage");
