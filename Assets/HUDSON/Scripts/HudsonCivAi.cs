@@ -20,7 +20,7 @@ public class HudsonCivAi : MonoBehaviour
     public GameObject bullet;
     public GameObject Player;
     int randomInt;
-
+    public AudioSource jumpySound;
     public LayerMask ground; //helps stop air jumping
 
 
@@ -34,16 +34,23 @@ public class HudsonCivAi : MonoBehaviour
         
     }
 
+    public class AudioScript : MonoBehaviour
+    {
+        AudioSource audioSource;
+    }
 
     void Update()
     {
         //Random # Generator
         float randomInt = Random.Range(0, 120);
 
-        if((randomInt <= 15)&&(IsGrounded() == true))
+
+
+        if((randomInt <= 15)&&(IsGrounded() == true)&&(distToPlayer < 10))
         {
             Debug.Log("jumping ai");
             rb.AddForce(Vector2.up * 500);
+            jumpySound.Play();
         }
 
         if (mustPatrol)
