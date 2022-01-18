@@ -39,7 +39,7 @@ public class ScoreTrackingScript : MonoBehaviour
 
         scoreTrue = score + points;
 
-        hp = PH.Health;
+        hp = PH.HP;
 
         scoreText.text = "Score: " + scoreTrue;
         healthText.text = "Sugar: " + hp;
