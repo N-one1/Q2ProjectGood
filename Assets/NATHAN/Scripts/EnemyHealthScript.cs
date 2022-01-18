@@ -7,7 +7,7 @@ public class EnemyHealthScript : MonoBehaviour
     public float Health = 10;
     [SerializeField]
     public float StartingHealth = 10;
-    public AudioSource owSound;
+    public AudioSource DieSound;
 
     public class AudioScript : MonoBehaviour
     {
@@ -31,7 +31,7 @@ public class EnemyHealthScript : MonoBehaviour
         Health -= damage;
         if (Health <= 0)
         {
-            
+            DieSound.Play();
             //Debug.Log("Enemy Dead");
 
             Destroy(gameObject);
