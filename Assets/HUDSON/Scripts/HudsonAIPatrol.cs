@@ -23,7 +23,7 @@ public class HudsonAIPatrol : MonoBehaviour
 
     // anim stuff ---------------------------------------------------------------------------------------------
     Animator a;
-    bool isShooting = false;
+    bool isShooting;
 
     public class AudioScript : MonoBehaviour
     {
@@ -39,6 +39,7 @@ public class HudsonAIPatrol : MonoBehaviour
 
         // anim stuff ---------------------------------------------------------------------------------------------
         a = GetComponent<Animator>();
+        bool isShooting = false;
     }
 
 
@@ -46,7 +47,7 @@ public class HudsonAIPatrol : MonoBehaviour
     {
         // anim stuff ---------------------------------------------------------------------------------------------
         a.SetFloat("yVelocity", rb.velocity.y);
-        a.SetBool("IsShooting", isShooting);
+        //a.SetBool("IsShooting", isShooting);
 
         if (mustPatrol)
         {
@@ -66,14 +67,19 @@ public class HudsonAIPatrol : MonoBehaviour
             mustPatrol = false;
             rb.velocity = Vector2.zero;
 
-            if(canShoot)
-            StartCoroutine(Shoot());
-            bool isShooting = true;
+            if (canShoot)
+            {
+                StartCoroutine(Shoot());
+                //bool isShooting = true; 
+                a.SetBool("IsShooting", true);
+            }
+
         }
         else
         {
             mustPatrol = true;
-            bool isShooting = false;
+            //bool isShooting = false;
+            a.SetBool("IsShooting", false);
         }
 
     }
