@@ -14,6 +14,7 @@ public class ConstandDamageScript : MonoBehaviour
     //hp bar mask
     public GameObject hpBarMask;
     public AudioSource ouchSource;
+    public AudioSource eiSource;
     public int Health;
 
     // Start is called before the first frame update
@@ -38,11 +39,6 @@ public class ConstandDamageScript : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        ouchSource.Play();
-    }
-
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.tag == "Player")
@@ -57,6 +53,10 @@ public class ConstandDamageScript : MonoBehaviour
             }
 
             
+        }
+        if (collision.tag == "Enemy")
+        {
+            eiSource.Play();
         }
 
         var enemy = collision.gameObject.GetComponent<EnemyHealthScript>();
