@@ -192,10 +192,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 10
+  HP: 0
   StartingHealth: 100
-  Heal: 20
+  Heal: 10
   P: {fileID: 510774394642952336}
+  GameOverScene: {fileID: 0}
   hpBarMask: {fileID: 0}
+  bullet: {fileID: 0}
+  ow: {fileID: 0}
   scoreTracker: {fileID: 0}
   s: 0
 --- !u!114 &7333548911490477986
