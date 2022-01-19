@@ -17,6 +17,12 @@ public class ConstandDamageScript : MonoBehaviour
     public AudioSource eiSource;
     public int Health;
 
+    //take damage sound effect
+    [SerializeField]
+    public GameObject OuchSoundMaker;
+    [SerializeField]
+    public GameObject OuchSoundSpawnPoint;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +43,14 @@ public class ConstandDamageScript : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            GameObject OuchSound = Instantiate(OuchSoundMaker, OuchSoundSpawnPoint.transform.position, Quaternion.identity);
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)

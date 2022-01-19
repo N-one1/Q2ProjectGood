@@ -34,6 +34,7 @@ Transform:
   m_Children:
   - {fileID: 6915709489880691993}
   - {fileID: 7818310073534386232}
+  - {fileID: 7007499209692596516}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -106,6 +107,9 @@ MonoBehaviour:
   ouchSource: {fileID: 4082906964036361028}
   eiSource: {fileID: 0}
   Health: 0
+  OuchSoundMaker: {fileID: 2526895468120774797, guid: 981ae8752ead98a459796849ec2f81e9,
+    type: 3}
+  OuchSoundSpawnPoint: {fileID: 7270050281239199802}
 --- !u!60 &6673306218628537659
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -441,3 +445,33 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &7270050281239199802
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7007499209692596516}
+  m_Layer: 8
+  m_Name: OuchSoundPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7007499209692596516
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7270050281239199802}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7427011387175496865}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
